@@ -1,0 +1,15 @@
+package com.osf.web;
+
+@Data
+public class CustomerInfo {
+	private Integer ciNum;
+	private String ciId;
+	private String ciPwd;
+	private String ciName;
+	private Integer ciAge;
+	private String ciEmail;
+	private String ciZip;
+	private String ciAddr1;
+	private String ciAddr2;
+	private String ciPhone;
+}
