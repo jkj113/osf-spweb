@@ -1,4 +1,4 @@
-package com.osf.web;
+package com.osf.web.vo;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

@@ -1,4 +1,6 @@
-package com.osf.web;
+package com.osf.web.vo;
+
+import lombok.Data;
 
 @Data
 public class CustomerInfo {

@@ -9,10 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class URIController {
 
-	@RequestMapping(value="/uri/**", method = RequestMethod.GET)
+//	@RequestMapping(value="/uri/**", method = RequestMethod.GET)
+//	public String goPage(HttpServletRequest req) {
+//		String uri = req.getRequestURI();
+//		uri = uri.replace("/uri", "");
+//		return uri;
+//	}
+	@RequestMapping("/uri/**")
 	public String goPage(HttpServletRequest req) {
-		String uri = req.getRequestURI();
-		uri = uri.replace("/uri", "");
-		return uri;
+		return req.getRequestURI();
 	}
 }
