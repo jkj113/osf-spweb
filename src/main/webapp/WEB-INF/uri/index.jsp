@@ -17,7 +17,11 @@
 <!-- Custom styles for this template -->
 <link href="/resources/signin.css" rel="stylesheet">
 </head>
-
+<script>
+function goEmpInsertPage(){
+	location.href='/emp/insert'
+}
+</script>
 <body class="text-center">
 	<div class="container">${emp.ENAME}님환영합니다.<br>
 	<c:if test="${emp.LVL==2}">
@@ -28,15 +32,19 @@
 				<th>이름</th>
 				<th>ID</th>
 				<th>PWD</th>
+				<th>COMM</th>
 			</tr>
-			<c:forEach items="${empList}" var="e">
+  	<c:forEach items="${empList}" var="e">
+			
 				<tr>
-					<td>${e.EMPNO}</td>
-					<td>${e.ENAME}</td>
-					<td>${e.ID}</td>
-					<td>${e.PWD}</td>
+					<td>${e.empNo}</td>
+					<td>${e.ename}</td>
+					<td>${e.id}</td>
+					<td>${e.pwd}</td>
+					<td>${e.comm}</td>
 			</c:forEach>
 		</table>
+		<button onclick="goEmpInsertPage()">사원 등록</button>
 	</c:if>
 	</div>
 </body>
